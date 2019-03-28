@@ -1,0 +1,69 @@
+from utils import buildCFG
+import json
+import os
+from utils import buildCFG
+# from sklearn.feature_extraction.text import CountVectorizer
+# import json
+# import os
+
+#
+# datasetLocation = 'dataset_new2/'
+# dataLocation = 'data3/'
+# questionList = os.listdir(datasetLocation)
+# questionList.sort()
+# print questionList
+# for i in range(len(questionList) - 2):
+# 	dirList = os.listdir(datasetLocation + questionList[i])  # dir is your directory path
+# 	dirList.sort()
+# 	os.mkdir(dataLocation + questionList[i])
+# 	for j in range(len(dirList) - 1):
+#
+# 		try:
+# 			cfg = buildCFG(datasetLocation + questionList[i] + "/" + dirList[j])
+# 		except:
+# 			cfg = buildCFG(datasetLocation + questionList[i] + "/" + dirList[j], 'main')
+# 		with open('graph.json', "r") as f1:
+# 			dta = json.load(f1)
+# 			with open(dataLocation + questionList[i] + "/" + dirList[j][:-2] + ".json", "w") as f2:
+# 				json.dump(dta, f2)
+#
+# 	dirList = os.listdir(datasetLocation + questionList[i] + "/goodset")
+# 	os.mkdir(dataLocation + questionList[i] + "/goodset")
+# 	dirList.sort()
+# 	for j in range(len(dirList) - 1):
+# 		try:
+# 			cfg = buildCFG(datasetLocation + questionList[i] + "/goodset/" + dirList[j])
+# 		except:
+# 			cfg = buildCFG(datasetLocation + questionList[i] + "/goodset/" + dirList[j], 'main')
+# 		with open('graph.json', "r") as f1:
+# 			dta = json.load(f1)
+# 			with open(dataLocation + questionList[i] + "/goodset/" + dirList[j][:-2] + ".json", "w") as f2:
+# 				json.dump(dta, f2)
+
+
+# if (isTest < 10):
+# try :
+# 	cfg = buildCFG("test.c")
+# except :
+cfg = buildCFG("test.c", 'main')
+
+
+# print cfg.printer()
+
+
+# cfg = buildCFG('test.c', 'main')
+# with open('data2/1/goodset/2.json', "r") as f1:
+#     dta = json.load(f1)
+# with open('data2/1/1.json', "r") as f1:
+#     dta1 = json.load(f1)
+# print dta['features'][0]['basic']
+# featBasic = " ".join(dta['features'][0]['basic'])
+# corpus = []
+# corpus.append(featBasic)
+# corpus.append(" ".join(dta1['features'][0]['basic']))
+# vectorizer = CountVectorizer()
+# X = vectorizer.fit_transform(corpus)
+# print(vectorizer.get_feature_names())
+# print(X.toarray())
+
+# print cfg.printer()
